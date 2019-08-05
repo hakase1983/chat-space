@@ -29,19 +29,19 @@
         %a.right-header__button
           edit
     .messages
-      .message{"data-message_id" => "4787"}
+      .message {data message{id: 4787}
         .upper-info
           %p.upper-info_user
           %p.upper-info_date
         %p.message__text
           %p.upper-info__user
     .form
-      %form.new-message{"accept-charset" => "UTF-8", :action => "/groups/1937/messages", :enctype => "multipart/form-data", :method => "post"}
+      %form.new-message{accept{charset: UTF-8}, action: /groups/1937/messages, enctype: multipart/form{data, method: post}}
         .input_box
-          %input.input_box__text{:name => "message[content]",:placeholder => "type a mwssage",:type => "text"}
-          %label.image-label{:for => "message_image"}
+          %input.input_box__text{name: message[content],placeholder: type a mwssage,type: text}
+          %label.image-label{for: message{image}}
             %i.fa.fa-picture-o
-          %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}
+          %input.new-message__submit-btn{data-disable-with: Send, name: commit, type: submit, value: Send}
 
         
             

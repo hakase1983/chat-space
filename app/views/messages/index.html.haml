@@ -1,0 +1,54 @@
+.notification
+  .notice グループ作成しました
+.wrapper
+  .side-bar
+    .header
+      %h3.header_name hakase1983
+      %ul.header_lists
+        %li.list
+          %i.fa.fa-pencil-square-o.icon
+        %li.list
+          %i.fa.fa-cog.icon
+
+    .groups
+      .group          
+      .group_name
+        tech expert
+      .group_message
+        まだありません
+  .chat-main
+    .main-header
+      .left-header
+        .left-header_title
+          tech-expert
+        %ul.left-header_members
+          member
+          %li.member
+            hakase1983
+      .right-header
+        %a.right-header__button
+          edit
+    .messages
+      .message {data message{id: 4787}
+        .upper-info
+          %p.upper-info_user
+          %p.upper-info_date
+        %p.message__text
+          %p.upper-info__user
+    .form
+      %form.new-message{accept{charset: UTF-8}, action: /groups/1937/messages, enctype: multipart/form{data, method: post}}
+        .input_box
+          %input.input_box__text{name: message[content],placeholder: type a mwssage,type: text}
+          %label.image-label{for: message{image}}
+            %i.fa.fa-picture-o
+          %input.new-message__submit-btn{data-disable-with: Send, name: commit, type: submit, value: Send}
+
+        
+            
+
+
+
+
+      
+
+

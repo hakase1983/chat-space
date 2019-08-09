@@ -5,30 +5,25 @@
     .main-header
       .left-header
         .left-header_title
-          tech-expert
+          = @group.name
         %ul.left-header_members
-          member
+          Member:
           %li.member
-            hakase1983
-      .right-header
-        %a.right-header__button
-          edit
-    .messages
-      .message
-        .upper-info
-          %p.upper-info_user
-          %p.upper-info_date
-        %p.message__text
-          %p.upper-info__user
-    .form
-      %form.new-message
-        .input_box
-          %input.input_box__text
-          %label.image-label
-            %i.fa.fa-picture-o
-          %input.new-message__submit-btn{:type => "submit", :value => "Send"}
+            - @group.users.each do |group_user|
+              =group_user.name
+      = link_to "edit", edit_group_path(@group.id), class: "right-header-btn"
           
-
+    .messages
+      =render @messages
+      
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
         
             
 

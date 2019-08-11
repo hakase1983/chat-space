@@ -3,20 +3,20 @@ $(function(){
   function new_message(message){
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
     var html= `<div class="message">
-              <div class="upper-message">
-              <div class="upper_info_user">
-              ${message.name}
-              <span class="upper_info_data">
-              ${message.created_at}
-              </span>
-              </div>
-              </div>
-              <div class="lower-message">
-              <p class="lower-message__content">
-              ${message.content}
-              ${img}
-              </p>
-              </div>
+                <div class="upper-message">
+                  <div class="upper_info_user">
+                    ${message.name}
+                      <span class="upper_info_data">
+                        ${message.created_at}
+                      </span>
+                  </div>
+                </div>
+               <div class="lower-message">
+                  <p class="lower-message__content">
+                    ${message.content}
+                    ${img}
+                  </p>
+                </div>
               </div>`
 
     return html;
@@ -40,14 +40,11 @@ $(function(){
        $('.messages').append(html);
        $('form')[0].reset();
        $('.form__submit').prop('disabled',false);
-       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
+       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
        $('.form__submit').attr('disabled',false);
       })
-
       .fail(function(message){
         console.log('error');
-
-      });
-    
-    })
-})
+        });
+    　})
+　})

@@ -44,7 +44,7 @@ $(function(){
        $('.form__submit').attr('disabled',false);
       })
       .fail(function(message){
-        console.log('error');
+        alert('error');
         });
     　})
 　})

@@ -1,9 +1,9 @@
 .message
   .upper-message
-    .upper-message__user-name
+    .upper_info_user
       = message.user.name
-    .upper-message__date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      %span.upper_info_data
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
   .lower-message
     - if message.content.present? 
       %p.lower-message__content 

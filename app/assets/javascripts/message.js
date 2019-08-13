@@ -1,5 +1,4 @@
 $(function(){
-
   function new_message(message){
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
     var html= `<div class="message">
@@ -41,7 +40,6 @@ $(function(){
        $('form')[0].reset();
        $('.form__submit').prop('disabled',false);
        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-       $('.form__submit').attr('disabled',false);
       })
       .fail(function(message){
         alert('error');

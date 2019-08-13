@@ -90,6 +90,11 @@ li {
     clear: both;
     display: block;
   }
+  &_input{
+    font-family: inherit;
+    font-size: inherit;
+    font-weigth: inherit;
+  }
   &__name {
     float: left;
   }
@@ -102,6 +107,7 @@ li {
     }
     &--remove {
       color: #f05050;
+      float: right;
     }
   }
 }

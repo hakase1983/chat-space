@@ -11,7 +11,10 @@
           %li.member
             - @group.users.each do |group_user|
               =group_user.name
-      = link_to "Edit", edit_group_path(@group.id), class: "right-header-btn"
+      = link_to edit_group_path(@group.id) do
+        .right-header-btn{"data-turbolinks": "false"}
+          Edit
+          
           
     .messages
       =render @messages

@@ -61,4 +61,4 @@ $(function(){
     $('.chat-group-form__action-btn').on("click", function(){
       $('.chat-group-form__action-btn').removeAttr('disabled');
     });
-  });
+});

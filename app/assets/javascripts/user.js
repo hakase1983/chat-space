@@ -20,7 +20,6 @@ $(function(){
                         <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                       </div>`
     $('.chat-group-users').append(html);
-    console.log(html)
     }
     
   $('#user-search-field').on('keyup',function(){
@@ -60,8 +59,6 @@ $(function(){
     });
 
     $('.chat-group-form__action-btn').on("click", function(){
-      console.log("Hellow World!!");
       $('.chat-group-form__action-btn').removeAttr('disabled');
-      console.log("Hellow World!!")
     });
   });
